@@ -2,7 +2,7 @@
 :root {
   --lightgray: #d9d9d9;
   --gray: #9c9c9c;
-  --skyblue: #15c4f4;
+  --skyblue: #66aedb;
   --darkGrey: #464d53;
   --caloryCard: #656565;
   --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
@@ -20,4 +20,11 @@
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.stroke-text {
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
