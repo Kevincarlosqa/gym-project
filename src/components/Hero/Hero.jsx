@@ -17,11 +17,11 @@ const Hero = () => {
         {/* Hero Heading */}
         <div className="hero-text">
           <div>
-            <span className="stroke-text">Shape </span>
-            <span>Your</span>
+            <span className="stroke-text">Moldea </span>
+            <span>tu</span>
           </div>
           <div>
-            <span>Ideal Body</span>
+            <span>cuerpo ideal</span>
           </div>
           <div>
             <span>
@@ -29,6 +29,25 @@ const Hero = () => {
               tu vida al máximo
             </span>
           </div>
+        </div>
+        {/* Gym stats */}
+        <div className="figures">
+          <div>
+            <span>+140</span>
+            <span>trainers expertos</span>
+          </div>
+          <div>
+            <span>+978</span>
+            <span>miembros</span>
+          </div>
+          <div>
+            <span>+50</span>
+            <span>programas de fitness</span>
+          </div>
+        </div>
+        <div className="hero-buttons">
+          <button className="btn">Empezar</button>
+          <button className="btn">Aprende Mas</button>
         </div>
       </div>
       <div className="right-h">right side</div>
