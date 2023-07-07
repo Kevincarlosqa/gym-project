@@ -5,7 +5,14 @@
   --skyblue: #66aedb;
   --darkGrey: #464d53;
   --caloryCard: #656565;
-  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  /* --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%); */
+  --skyblue-darker: #0880d0;
+
+  --planCard: linear-gradient(
+    210.41deg,
+    var(--skyblue-darker) 1.14%,
+    var(--skyblue) 100.75%
+  );
   --appColor: #3c3f45;
 }
 
