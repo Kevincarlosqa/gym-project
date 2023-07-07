@@ -8,9 +8,9 @@ const Programs = () => {
     <div className="Programs" id="programs">
       {/* Header */}
       <div className="programs-header">
-        <span className="stroke-text">Explore our</span>
-        <span>Programs</span>
-        <span className="stroke-text">to shape you</span>
+        <span className="stroke-text">descubre</span>
+        <span>nuestros</span>
+        <span className="stroke-text">programas</span>
       </div>
       <div className="program-categories">
         {programsData.map((program, index) => (

@@ -14,7 +14,7 @@ const Hero = () => {
         {/* The best ad */}
         <div className="the-best-ad">
           <div></div>
-          <span>The best Social Fitness in Aqp</span>
+          <span>El mejor gimnasio social de arequipa</span>
         </div>
 
         {/* Hero Heading */}
