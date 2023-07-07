@@ -1,11 +1,14 @@
 import React from "react";
 import "./Header.css";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/gymLogo.png";
 
 const Header = () => {
   return (
     <div className="header">
-      <img src={Logo} alt="GymLogo" className="logo" />
+      <div>
+        <img src={Logo} alt="GymLogo" className="logo" />
+        {/* <h3>Imperium fitness</h3> */}
+      </div>
       <ul className="header-menu">
         <li>Home</li>
         <li>Programs</li>
