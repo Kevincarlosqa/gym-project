@@ -16,10 +16,11 @@
   flex: 1;
   position: relative;
   background-color: var(--skyblue);
+  border-bottom-left-radius: 20px;
 }
 
 .the-best-ad {
-  margin-top: 4rem;
+  margin-top: 3rem;
   background-color: #363d42;
   border-radius: 4rem;
   width: fit-content;
@@ -147,6 +148,7 @@
 
 .hero-image-back {
   position: absolute;
+  width: 15rem;
   top: 4rem;
   right: 20rem;
   z-index: -1;

@@ -7,7 +7,7 @@ import image4 from "../../assets/image4.png";
 import nb from "../../assets/nb.png";
 import adidas from "../../assets/adidas.png";
 import nike from "../../assets/nike.png";
-import tick from "../../assets/tick.png";
+import tick from "../../assets/tick-imp.png";
 
 const Reasons = () => {
   return (
