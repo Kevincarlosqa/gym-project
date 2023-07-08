@@ -45,7 +45,13 @@
   color: var(--lightgray);
   width: 100%;
 }
-
+input,
+select {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
 ::placeholder {
   color: var(--lightgray);
 }
@@ -65,6 +71,6 @@
     flex-direction: column;
   }
   .right-j {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 }

@@ -21,13 +21,19 @@
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    align-items: center;
+  }
   .header > :nth-child(2) {
     position: fixed;
-    right: 2rem;
+    right: 3rem;
     z-index: 99;
   }
   .header-menu {
     flex-direction: column;
+    position: absolute;
+    gap: 1.5rem;
+    top: 1.2rem;
     background-color: var(--appColor);
     padding: 2rem;
     border-radius: 10px;

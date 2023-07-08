@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 import "./Header.css";
@@ -8,6 +8,20 @@ const Header = () => {
   const mobile = window.innerWidth <= 768 ? true : false;
   const [menu, setMenu] = useState(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Comprueba si el clic ocurrió fuera del área del menú y cierra el menú si está abierto
+      if (menu && !event.target.closest(".menu")) {
+        setMenu(false);
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, [menu]);
   return (
     <div className="header">
       <div>
@@ -22,6 +36,7 @@ const Header = () => {
             borderRadius: "5px",
           }}
           onClick={() => setMenu(true)}
+          className="menu"
         >
           <img
             src={Bars}
@@ -38,7 +53,7 @@ const Header = () => {
               spy={true}
               smooth={true}
             >
-              Home
+              Inicio
             </Link>
           </li>
           <li>
@@ -48,7 +63,7 @@ const Header = () => {
               spy={true}
               smooth={true}
             >
-              Programs
+              Programas
             </Link>
           </li>
           <li>
@@ -58,7 +73,7 @@ const Header = () => {
               spy={true}
               smooth={true}
             >
-              Why us
+              Porque Nosotros?
             </Link>
           </li>
           <li>
@@ -68,7 +83,7 @@ const Header = () => {
               spy={true}
               smooth={true}
             >
-              Plans
+              Planes
             </Link>
           </li>
           <li>
@@ -78,7 +93,7 @@ const Header = () => {
               spy={true}
               smooth={true}
             >
-              Testimonials
+              Testimonios
             </Link>
           </li>
         </ul>

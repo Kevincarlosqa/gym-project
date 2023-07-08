@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Programs.css";
 import { programsData } from "../../data/programsData";
 import RightArrow from "../../assets/rightArrow.png";
@@ -14,15 +15,17 @@ const Programs = () => {
       </div>
       <div className="program-categories">
         {programsData.map((program, index) => (
-          <div className="category" key={`program-${index}`}>
-            {program.image}
-            <span>{program.heading}</span>
-            <span>{program.details}</span>
-            <div className="join-now">
-              <span>Unete Ahora</span>
-              <img src={RightArrow} />
+          <Link to="join-us" spy={true} smooth={true} key={`program-${index}`}>
+            <div className="category">
+              {program.image}
+              <span>{program.heading}</span>
+              <span>{program.details}</span>
+              <div className="join-now">
+                <span>Unete Ahora</span>
+                <img src={RightArrow} />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

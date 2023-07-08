@@ -48,3 +48,14 @@
   filter: blur(180px);
   background: var(--skyblue);
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 0;
+    height: 14rem;
+    gap: 1rem;
+  }
+  .social-links {
+    margin-top: 1rem;
+  }
+}

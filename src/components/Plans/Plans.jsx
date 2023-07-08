@@ -1,17 +1,19 @@
 import React from "react";
+import { Link } from "react-scroll";
+
 import { plansData } from "../../data/plansData";
 import "./Plans.css";
 import whiteTick from "../../assets/whiteTick.png";
 
 const Plans = () => {
   return (
-    <div className="plans-container">
+    <div className="plans-container" id="plans">
       <div className="blur plans-blur-1"></div>
       <div className="blur plans-blur-2"></div>
       <div className="programs-header" style={{ gap: "2rem" }}>
-        <span className="stroke-text">READY TO START</span>
-        <span>YOUR JOURNEY</span>
-        <span className="stroke-text">NOM WITHUS</span>
+        <span className="stroke-text">LISTO PARA</span>
+        <span>ENTRENAR CON</span>
+        <span className="stroke-text">NOSOTROS?</span>
       </div>
       {/* Plans Card */}
       <div className="plans">
@@ -29,9 +31,19 @@ const Plans = () => {
               ))}
             </div>
             <div>
-              <span>See more benefits -</span>
+              <span></span>
             </div>
-            <button className="btn">Join Now</button>
+            <Link
+              to="join-us"
+              spy={true}
+              smooth={true}
+              style={{ cursor: "pointer", width: "100%" }}
+            >
+              <button className="btn" style={{ width: "100%" }}>
+                {" "}
+                Unete Ahora
+              </button>
+            </Link>
           </div>
         ))}
       </div>

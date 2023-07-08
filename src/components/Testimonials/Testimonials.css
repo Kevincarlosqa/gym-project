@@ -109,4 +109,8 @@
     left: 0;
     gap: 2rem;
   }
+  .left-t > :nth-child(5) {
+    font-size: small;
+    margin: auto;
+  }
 }

@@ -7,7 +7,11 @@ const Join = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(e.target[0].value);
+    if (e.target[0].value === "") {
+      alert("Ingresa un correo");
+      return;
+    }
     emailjs
       .sendForm(
         "service_fdtolpl",
@@ -50,7 +54,7 @@ const Join = () => {
             name="user_email"
             placeholder="Ingresa tu direccion de correo"
           />
-          <button className="btn btn-j">Join Now</button>
+          <button className="btn btn-j">Unete Ahora</button>
         </form>
       </div>
     </div>

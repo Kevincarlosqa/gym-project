@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import NumberCounter from "number-counter";
+import { Link } from "react-scroll";
 
 import Header from "../Header/Header";
 import hero_image from "../../assets/hero_image.png";
@@ -70,7 +71,17 @@ const Hero = () => {
         </div>
       </div>
       <div className="right-h">
-        <button className="btn">Unete Ahora</button>
+        {/* <button className="btn">
+          <Link to="join-us" spy={true} smooth={true}>
+            Unete Ahora
+          </Link>
+        </button> */}
+        <Link to="join-us" className="btn" spy={true} smooth={true}>
+          <button className="btn" style={{ padding: "0" }}>
+            {" "}
+            Unete Ahora
+          </button>
+        </Link>
         <motion.div
           initial={{ right: "-1rem" }}
           whileInView={{ right: "4rem" }}
