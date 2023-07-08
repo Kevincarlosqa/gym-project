@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import Header from "../Header/Header";
 import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image-back_skyblue.png";
@@ -7,6 +9,7 @@ import Calories from "../../assets/calories.png";
 import "./Hero.css";
 
 const Hero = () => {
+  const transition = { type: "spring", duration: 3 };
   return (
     <div className="hero">
       <div className="blur hero-blur"></div>
@@ -14,7 +17,11 @@ const Hero = () => {
         <Header />
         {/* The best ad */}
         <div className="the-best-ad">
-          <div></div>
+          <motion.div
+            initial={{ left: "266px" }}
+            whileInView={{ left: "8px" }}
+            transition={{ ...transition, type: "linear" }}
+          ></motion.div>
           <span>El mejor gimnasio social de arequipa</span>
         </div>
 
@@ -29,8 +36,8 @@ const Hero = () => {
           </div>
           <div>
             <span>
-              Aquí te ayudaremos a moldear y construir tu cuerpo ideal y vivir
-              tu vida al máximo
+              Aquí te ayudaremos a moldear y construir tu cuerpo ideal para que
+              vivas tu vida al máximo
             </span>
           </div>
         </div>
@@ -56,22 +63,39 @@ const Hero = () => {
       </div>
       <div className="right-h">
         <button className="btn">Unete Ahora</button>
-        <div className="heart-rate">
+        <motion.div
+          initial={{ right: "-1rem" }}
+          whileInView={{ right: "4rem" }}
+          transition={transition}
+          className="heart-rate"
+        >
           <img src={Heart} alt="Heart Icon" />
           <span>Heart Rate</span>
           <span>116 bpm</span>
-        </div>
+        </motion.div>
         {/* Hero Images */}
         <img src={hero_image} alt="" className="hero-image" />
-        <img src={hero_image_back} alt="" className="hero-image-back" />
+        <motion.img
+          initial={{ right: "11rem" }}
+          whileInView={{ right: "20rem" }}
+          transition={transition}
+          src={hero_image_back}
+          alt=""
+          className="hero-image-back"
+        />
         {/* Calories */}
-        <div className="calories">
+        <motion.div
+          initial={{ right: "37rem" }}
+          whileInView={{ right: "28rem" }}
+          transition={transition}
+          className="calories"
+        >
           <img src={Calories} alt="" />
           <div>
             <span>Calorias Quemadas</span>
             <span>220 kcal</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
