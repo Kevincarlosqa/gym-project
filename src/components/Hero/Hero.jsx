@@ -10,15 +10,16 @@ import "./Hero.css";
 
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
+  const mobile = window.innerWidth <= 768 ? true : false;
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <div className="blur hero-blur"></div>
       <div className="left-h">
         <Header />
         {/* The best ad */}
         <div className="the-best-ad">
           <motion.div
-            initial={{ left: "266px" }}
+            initial={{ left: mobile ? "155px" : "266px" }}
             whileInView={{ left: "8px" }}
             transition={{ ...transition, type: "linear" }}
           ></motion.div>
