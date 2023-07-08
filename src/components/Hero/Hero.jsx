@@ -10,6 +10,14 @@ import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import "./Hero.css";
 
+const linkButton = {
+  background: "transparent",
+  border: "none",
+  fontWeight: "bold",
+  color: "white",
+  cursor: "pointer",
+};
+
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768 ? true : false;
@@ -66,16 +74,27 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-buttons">
-          <button className="btn">Empezar</button>
-          <button className="btn">Aprende Mas</button>
+          <Link
+            to="join-us"
+            className="btn"
+            style={{ height: "16px" }}
+            spy={true}
+            smooth={true}
+          >
+            <button style={linkButton}>Empezar</button>
+          </Link>
+          <Link
+            to="programs"
+            className="btn"
+            style={{ height: "21px" }}
+            spy={true}
+            smooth={true}
+          >
+            <button style={linkButton}>Aprende Mas</button>
+          </Link>
         </div>
       </div>
       <div className="right-h">
-        {/* <button className="btn">
-          <Link to="join-us" spy={true} smooth={true}>
-            Unete Ahora
-          </Link>
-        </button> */}
         <Link to="join-us" className="btn" spy={true} smooth={true}>
           <button className="btn" style={{ padding: "0" }}>
             {" "}
