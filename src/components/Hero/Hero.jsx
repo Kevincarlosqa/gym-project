@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import NumberCounter from "number-counter";
 
 import Header from "../Header/Header";
 import hero_image from "../../assets/hero_image.png";
@@ -45,15 +46,21 @@ const Hero = () => {
         {/* Gym stats */}
         <div className="figures">
           <div>
-            <span>+140</span>
+            <span>
+              <NumberCounter end={80} start={30} delay="4" preFix="+" />
+            </span>
             <span>trainers expertos</span>
           </div>
           <div>
-            <span>+978</span>
+            <span>
+              <NumberCounter end={978} start={800} delay="4" preFix="+" />
+            </span>
             <span>miembros</span>
           </div>
           <div>
-            <span>+50</span>
+            <span>
+              <NumberCounter end={50} start={20} delay="4" preFix="+" />
+            </span>
             <span>programas de fitness</span>
           </div>
         </div>
